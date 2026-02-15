@@ -39,6 +39,17 @@ Unique Constraint:
    NEXT_PUBLIC_SUPABASE_ANON_KEY
 4. Run:
    npm run dev
+## 🧩 Challenges Faced & Solutions
+
+### 1. Supabase RLS Configuration
+Ensuring users could only access their own bookmarks required proper Row Level Security policies. I configured SELECT, INSERT, and DELETE policies using `auth.uid()`.
+
+### 2. Duplicate Prevention
+Initially, duplicate bookmarks were being inserted. I resolved this by adding a database-level unique constraint on `(user_id, url)` and handling error code `23505` in the frontend.
+
+### 3. Production Deployment Issues
+During deployment, the build failed due to missing environment variables. I resolved this by configuring `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Vercel and updating Supabase redirect URLs.
+
 ## 🌍 Deployment
 Deployed using Vercel with environment variables configured in dashboard.
 Built by Prathyusha Y
