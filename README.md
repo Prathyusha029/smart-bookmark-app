@@ -1,17 +1,13 @@
 # Smart Bookmark App
-
 A secure fullstack bookmark management application built using Next.js, Supabase, and Google OAuth.
-
 ## 🚀 Live Demo
 https://smart-bookmark-app-iota-ten.vercel.app
-
 ## 🛠 Tech Stack
 - Next.js (App Router)
 - Supabase (PostgreSQL + Auth + Realtime)
 - Google OAuth 2.0
 - Tailwind CSS
 - Vercel (Deployment)
-
 ## ✨ Features
 - Google OAuth Authentication
 - Secure Row Level Security (RLS)
@@ -20,13 +16,11 @@ https://smart-bookmark-app-iota-ten.vercel.app
 - Duplicate URL prevention (unique constraint per user)
 - Realtime updates across tabs
 - Fully deployed on Vercel
-
 ## 🔐 Security
 - Row Level Security enforced on database
 - Unique constraint on (user_id, url)
 - No secret keys exposed to frontend
 - Protected routes for authenticated users only
-
 ## 🧠 Database Design
 Table: bookmarks
 - id (UUID)
@@ -34,12 +28,9 @@ Table: bookmarks
 - title (TEXT)
 - url (TEXT)
 - created_at (TIMESTAMPTZ)
-
 Unique Constraint:
 (user_id, url)
-
 ## ⚙️ Setup Locally
-
 1. Clone repo
 2. Install dependencies
    npm install
@@ -48,10 +39,6 @@ Unique Constraint:
    NEXT_PUBLIC_SUPABASE_ANON_KEY
 4. Run:
    npm run dev
-
 ## 🌍 Deployment
 Deployed using Vercel with environment variables configured in dashboard.
-
----
-
 Built by Prathyusha Y
